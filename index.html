@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <h1 class="display-4 text-center">
+            <i class="fas fa-money-bill text-primary"></i>
+            <span class="text-primary">Tip Calculator</span>
+        </h1>
+
+        <form id="tip-form" class="mt-5">
+            <div class="form-group">
+                <label for="billAmount">Enter bill amount...</label>
+                <input type="number" min="1" id="billAmount" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="serviceOption">How was the service?</label>
+                <select name="options" id="serviceOption" class="form-control">
+                    <option selected disabled hidden value="0">Select service</option>
+                    <option value="0.3" id="outstanding">Outstanding (30%)</option>
+                    <option value="0.2" id="good">Good (20%)</option>
+                    <option value="0.15" id="ok">Ok (15%)</option>
+                    <option value="0.1" id="bad">Bad (10%)</option>
+                    <option value="0.05" id="terrible">Terrible (5%)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="numberOfPeople">How many people are sharing the bill?</label>
+                <input type="number" min="1" id="numberOfPeople" class="form-control">
+            </div>
+            <input type="submit" value="Calculate" class="btn btn-primary btn-block mt-3">
+        </form>
+        
+        <div id="display-output" class="display-4 mt-4 text-center"></div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

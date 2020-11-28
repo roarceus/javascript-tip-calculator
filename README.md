@@ -1,1 +1,2 @@
-# javascript-tip-calculator
+# JavasScript Tip Calculator
+
